@@ -1,0 +1,15 @@
+Last login: Fri Apr 29 11:34:58 2016 from 10.140.3.57cli 
+
+admin@SETUP1SITE1SWITCH2:~$ cli 
+Welcome. CLI is connected to STTS.
+CLI> trace_redirect 0 
+CLI> trace_redirect 1 
+CLI> stts tracing has been redirected to a terminal.
+get_uboot_env(ntpsrv, "132.163.4.101",)
+dbg "on sip" 
+CLI> get_uboot_env(ntpsrv, "132.163.4.101",)
+get_uboot_env(ntpsrv, "132.163.4.101",)
+get_uboot_env(ntpsrv, "132.163.4.101",)
+get_uboot_env(ntpsrv, "132.163.4.101",)
+get_uboot_env(ntpsrv, "132.163.4.101",)
+get_uboot_env(ntpsrv, "132.163.4.101",)
