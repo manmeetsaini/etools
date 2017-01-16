@@ -1,0 +1,4 @@
+/shoretel/bin/cli -c "trace_redirect 0"
+/shoretel/bin/cli -c "trace_redirect 1"
+ls -a
+

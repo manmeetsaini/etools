@@ -1,0 +1,42 @@
+#Script_procedure
+
+1. def start_tunnel ():
+
+    try:
+        ssh_tunnel = pexpect.spawn (tunnel_command % globals())
+        ssh_tunnel.expect ('password:')
+        time.sleep (0.1)
+        ssh_tunnel.sendline (X)
+        time.sleep (60) # Cygwin is slow to update process status.
+        ssh_tunnel.expect (pexpect.EOF)
+
+    except Exception as e:
+        print(str(e))
+
+		
+		
+
+c:\Python3>plink.exe 10.40.12.236 -l admin -pw ShoreTel -v -nokeycheck
+Looking up host "10.40.12.236"
+Connecting to 10.40.12.236 port 22
+Server version: SSH-2.0-OpenSSH_6.0
+We claim version: SSH-2.0-PuTTY_Release_0.60
+Using SSH protocol version 2
+Doing Diffie-Hellman group exchange
+Doing Diffie-Hellman key exchange with hash SHA-256
+Host key fingerprint is:
+ssh-rsa 2048 9a:a2:fe:45:e3:c7:99:9b:91:98:82:bd:de:a8:bb:75
+Initialised AES-256 SDCTR client->server encryption
+Initialised HMAC-SHA1 client->server MAC algorithm
+Initialised AES-256 SDCTR server->client encryption
+Initialised HMAC-SHA1 server->client MAC algorithm
+Using username "admin".
+Keyboard-interactive authentication refused
+Sent password
+Access granted
+Opened channel for session
+Allocated pty (ospeed 38400bps, ispeed 38400bps)
+Started a shell/command
+Last login: Wed Mar 30 19:45:36 2016 from 10.140.30.43
+admin@SETUP1SITE1SWITCH2:~$ exit
+

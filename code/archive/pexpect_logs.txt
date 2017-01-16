@@ -1,0 +1,20 @@
+>>> import pexpect
+>>> import pexpect.popen_spawn
+>>> ssh_login = pexpect.popen_spawn.PopenSpawn('plink.exe 10.40.12.236 -l admin -pw ShoreTel -v -nokeycheck')
+>>> print (ssh_login)
+<pexpect.popen_spawn.PopenSpawn object at 0x01E10FB0>
+>>> ssh_login.expect ('admin@SETUP1SITE1SWITCH2:~$')
+Traceback (most recent call last):
+  File "C:\Python3\lib\site-packages\pexpect\expect.py", line 95, in expect_loop
+    return self.timeout()
+  File "C:\Python3\lib\site-packages\pexpect\expect.py", line 68, in timeout
+    raise TIMEOUT(msg)
+pexpect.exceptions.TIMEOUT: <pexpect.popen_spawn.PopenSpawn object at 0x01E10FB0>
+
+During handling of the above exception, another exception occurred:
+
+>>> import sys
+>>> sys.path
+['', 'C:\\windows\\system32\\python34.zip', 'C:\\Python3\\DLLs', 'C:\\Python3\\lib', 'C:\\Python3', 'C:\\Users\\msaini\\AppData\\Roaming\\Python\\Python34\\site-packages', 'C:\\Pyt
+hon3\\lib\\site-packages']
+>>>
